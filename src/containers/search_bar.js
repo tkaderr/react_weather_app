@@ -18,7 +18,6 @@ class SearchBar extends Component{
 
   //all dom handlers they all come along with this event object always
   onInputChange(event){
-    console.log(event.target.value);
     //whenever we update the input, we want to update the state
     //if you use "this" it doesnt refer to the component but something else
     this.setState({term: event.target.value});

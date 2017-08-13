@@ -15,11 +15,13 @@ export function fetchWeather(city){
   //axios is like ajax request
   //returns a promise
   const request = axios.get(url);
-  console.log("request:", request);
 
   return ({
     type: FETCH_WEATHER,
     //payload contains data that describes this particular action
+    //when you pass the action(which is a promise as a payload property), redux-promise handles that request and stops the action. Once the request finishes, dispactch a new action of the same type but with a payload of the resolved request
+    //basically unwraps the promise
+    //useful because we dont want to have the reducer deal with a promise. We want a rsolved promise passed to reducer
     payload: request
   });
 }
