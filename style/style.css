@@ -12,3 +12,13 @@ spacing between the charts and search bar*/
 svg {
   height:150px;
 }
+
+.title {
+   text-align: center;
+ }
+
+/*find the first td of the first row and find the child row*/
+td:first-of-type, td:first-of-type > div {
+  height: 200px;
+  width: 250px;
+}
